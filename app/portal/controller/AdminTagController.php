@@ -65,6 +65,18 @@ class AdminTagController extends AdminBaseController
     }
 
     /**
+     * 标签点击分析
+     *
+     * @return mixed
+     */
+    public function hit(){
+        $portalTagModel = new PortalTagModel();
+        $this->assign("arrStatus", $portalTagModel::$STATUS);
+        return $this->fetch();
+
+    }
+
+    /**
      * 添加文章标签提交
      * @adminMenu(
      *     'name'   => '添加文章标签提交',
