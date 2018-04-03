@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50150
 File Encoding         : 65001
 
-Date: 2018-03-09 16:50:49
+Date: 2018-04-03 16:10:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,7 +36,7 @@ CREATE TABLE `cmf_admin_menu` (
   KEY `status` (`status`),
   KEY `parent_id` (`parent_id`),
   KEY `controller` (`controller`)
-) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
 
 -- ----------------------------
 -- Records of cmf_admin_menu
@@ -204,6 +204,7 @@ INSERT INTO `cmf_admin_menu` VALUES ('160', '158', '2', '0', '10000', 'user', 'A
 INSERT INTO `cmf_admin_menu` VALUES ('161', '158', '1', '0', '10000', 'user', 'AdminUserAction', 'sync', '', '同步用户操作', '', '同步用户操作');
 INSERT INTO `cmf_admin_menu` VALUES ('162', '1', '1', '1', '10000', 'plugin/Demo', 'AdminIndex', 'index', '', '演示插件', '', '演示插件');
 INSERT INTO `cmf_admin_menu` VALUES ('163', '162', '1', '0', '10000', 'plugin/Demo', 'AdminIndex', 'setting', '', '演示插件设置', '', '演示插件设置');
+INSERT INTO `cmf_admin_menu` VALUES ('164', '0', '1', '1', '10000', 'admin', 'Redis', 'index', '', 'Redis管理', '', '');
 
 -- ----------------------------
 -- Table structure for `cmf_asset`
@@ -264,7 +265,7 @@ CREATE TABLE `cmf_auth_rule` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`) USING BTREE,
   KEY `module` (`app`,`status`,`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=utf8 COMMENT='权限规则表';
+) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=utf8 COMMENT='权限规则表';
 
 -- ----------------------------
 -- Records of cmf_auth_rule
@@ -432,6 +433,7 @@ INSERT INTO `cmf_auth_rule` VALUES ('160', '1', 'user', 'admin_url', 'user/Admin
 INSERT INTO `cmf_auth_rule` VALUES ('161', '1', 'user', 'admin_url', 'user/AdminUserAction/sync', '', '同步用户操作', '');
 INSERT INTO `cmf_auth_rule` VALUES ('162', '1', 'plugin/Demo', 'plugin_url', 'plugin/Demo/AdminIndex/index', '', '演示插件', '');
 INSERT INTO `cmf_auth_rule` VALUES ('163', '1', 'plugin/Demo', 'plugin_url', 'plugin/Demo/AdminIndex/setting', '', '演示插件设置', '');
+INSERT INTO `cmf_auth_rule` VALUES ('164', '1', 'admin', 'admin_url', 'admin/Redis/index', '', 'Redis管理', '');
 
 -- ----------------------------
 -- Table structure for `cmf_comment`
@@ -1007,7 +1009,7 @@ CREATE TABLE `cmf_user` (
 -- ----------------------------
 -- Records of cmf_user
 -- ----------------------------
-INSERT INTO `cmf_user` VALUES ('1', '1', '0', '0', '1520572795', '0', '0', '0.00', '1520561926', '1', 'admin', '###6c4fcdc3082457a19149be31ff6acfa4', 'admin', 'miaomin@bitmap3d.com.cn', '', '', '', '0.0.0.0', '', '', null);
+INSERT INTO `cmf_user` VALUES ('1', '1', '0', '0', '1522203741', '0', '0', '0.00', '1520561926', '1', 'admin', '###6c4fcdc3082457a19149be31ff6acfa4', 'admin', 'miaomin@bitmap3d.com.cn', '', '', '', '0.0.0.0', '', '', null);
 
 -- ----------------------------
 -- Table structure for `cmf_user_action`
