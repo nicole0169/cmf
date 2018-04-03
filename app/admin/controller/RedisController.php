@@ -32,7 +32,6 @@ class RedisController extends AdminBaseController
      */
     public function index()
     {
-        echo 'Redis work.';
 
         $targetArr = array(
             '2018010101',
@@ -43,10 +42,6 @@ class RedisController extends AdminBaseController
         $filterArr = array(
             '2018010103'
         );
-
-        var_dump($targetArr);
-
-        var_dump($filterArr);
 
         $options = ['type' => 'redis', 'password' => '', 'host' => '127.0.0.1'];
 
@@ -61,6 +56,6 @@ class RedisController extends AdminBaseController
 
         $res = $redis->sDiff('targetDate','filterDate');
 
-        print_r($res);
+        return $this->fetch();
     }
 }
